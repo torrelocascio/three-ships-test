@@ -1,4 +1,4 @@
-![HS Logo](design/hs-logo.jpeg)
+![HS Logo](./design/hs-logo.jpeg)
 
 # Home Solutions Developer Evaluation
 Welcome to the Home Solutions Developer Evaluation! Keep reading to understand why we have this process and what it measures, or if you're returning skip ahead to [the setup](#the-setup) section.
@@ -42,10 +42,10 @@ Develop at least two custom Gutenberg blocks that can be used within your site. 
 Higher fidelity PNGs can be found in the `design` folder.
 
 ### Home Page
-![Home Page](design/wp-dev-eval-home.png)
+![Home Page](./design/wp-dev-eval-home.png)
 
 ### Product Page
-![Product Page](design/wp-dev-eval-product.png)
+![Product Page](./design/wp-dev-eval-product.png)
 
 ## The Evaluation
 **Technical Proficiency:** Sophistication of the setup, code quality, use of modern development practices.
