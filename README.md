@@ -1,4 +1,4 @@
-![HS Logo](./design/hs-logo.jpeg)
+![HS Logo](./design/HS-logo.jpeg)
 
 # Home Solutions Developer Evaluation
 Welcome to the Home Solutions Developer Evaluation! Keep reading to understand why we have this process and what it measures, or if you're returning skip ahead to [the setup](#the-setup) section.
