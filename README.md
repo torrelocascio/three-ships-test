@@ -17,7 +17,7 @@ We’re an up-and-coming gutter company and just entering the market. We want to
 
 ## The Requirements
 ### Theme Development
-Develop a WordPress theme from scratch. The theme should be responsive and follow best practices for web performance and accessibility. You have flexibility in how you structure the files, how you bundle the assets, and how you approach global elements, and whether you need custom post types.
+Develop a WordPress theme from scratch. The theme should be responsive and follow best practices for web performance and accessibility. You have flexibility in how you structure the files, how you bundle the assets, and how you approach global elements, and whether you need custom post types. We've included the BlankSlate theme for convenience in getting started, but it's highly encouraged to change the project structure.
 
 ### Home Page and Product Page
 **Home Page:** Translate the needs of the brief into a home page template that allows a user to control the content via the admin. This page is to entice the customer into exploring the product offerings.
@@ -71,6 +71,6 @@ We provide a docker file to get you up and running quickly and to take some of t
 2. Run `docker-compose up` from the root of the project
 3. Visit `http://localhost` in your browser to access the WordPress site
 4. Follow the WordPress installation instructions to set up your site
-5. Activate the theme and begin development
+5. Activate the `eval` theme and begin development
 
 
