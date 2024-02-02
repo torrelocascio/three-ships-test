@@ -57,10 +57,10 @@ Higher fidelity PNGs can be found in the `design` folder.
 **Performance and Best Practices:** Optimization JavaScript and CSS, clean and structured PHP, adherence to web performance best practices.
 
 ## The Timeline
-Please complete the project within 1 week of being sent this material. Please email your contact at Home Solutions with a link to the github repository so that we can review. If you have not completed pieces of work at this point please send as is. We look forward to reviewing your work!
+Please enforce a time limit for yourself of 6 hours on this project, no more should be necessary and submitting a partial project is fine. Please email your contact at Home Solutions within 3 days of receiving with a link to the GitHub repository and a sql dump so that we can review. If you have not completed pieces of work at this point please send as is. We look forward to reviewing your work!
 
 ## The Setup
-We provide a docker file to get you up and running quickly and to take some of the pain of local development out of this process. This also
+We provide a docker file to get you up and running quickly and to take some of the pain of local development out of this process.
 
 ### Prerequisites
 - [Docker](https://www.docker.com/get-started)
