@@ -26,7 +26,9 @@ Develop a WordPress theme from scratch. The theme should be responsive and follo
 
 ### Features and Notes
 **Location API:** The location text in the heading (e.g. "Our Gutters available in [Your Location]" the design image) should default to "Your Area", but will automatically update to the user's City and State based on their IP address. Use the following API to determine the user's location: https://ipapi.co/api/. 
+
 **Carousel and Lightbox:** Implement a carousel and lightbox for the product images on the product page that is javascript driven. You can use a library or build your own. Please use placeholder images and dummy text.
+
 **Font:** The design uses the Geist font. Details to the typeface can be found here https://vercel.com/fonts.
 
 ### JavaScript and CSS
