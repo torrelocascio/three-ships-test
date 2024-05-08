@@ -29,7 +29,7 @@ Develop a WordPress theme from scratch. The theme should be responsive and follo
 
 **Carousel and Lightbox:** Implement a carousel and lightbox for the product images on the product page that is javascript driven. You can use a library or build your own. Please use placeholder images and dummy text.
 
-**Font:** The design uses the Geist font. Details to the typeface can be found here https://vercel.com/fonts.
+**Font:** The design uses the Geist font. Details to the typeface can be found here https://vercel.com/font.
 
 ### JavaScript and CSS
 Demonstrate how you structure and bundle your JavaScript and CSS. This could include built in tooling or custom pipelines. This is an excellent area to demonstrate your style of architecting frontend projects, and it’s recommended to use tooling that you’d implement in real sites.
