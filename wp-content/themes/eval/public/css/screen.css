@@ -53,4 +53,10 @@ footer .bottomMenu li a:hover {
   color: black;
 }
 
+.testimonial-empty-button {
+  background-color: lightgray;
+  padding: 5px;
+  color: darkgray;
+}
+
 /*# sourceMappingURL=screen.css.map*/
