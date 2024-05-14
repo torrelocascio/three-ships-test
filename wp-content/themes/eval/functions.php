@@ -137,18 +137,18 @@ function blankslate_image_insert_override($sizes)
     unset($sizes['2048x2048']);
     return $sizes;
 }
-add_action('widgets_init', 'blankslate_widgets_init');
-function blankslate_widgets_init()
-{
-    register_sidebar(array(
-        'name' => esc_html__('Sidebar Widget Area', 'blankslate'),
-        'id' => 'primary-widget-area',
-        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ));
-}
+// add_action('widgets_init', 'blankslate_widgets_init');
+// function blankslate_widgets_init()
+// {
+//     register_sidebar(array(
+//         'name' => esc_html__('Sidebar Widget Area', 'blankslate'),
+//         'id' => 'primary-widget-area',
+//         'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+//         'after_widget' => '</li>',
+//         'before_title' => '<h3 class="widget-title">',
+//         'after_title' => '</h3>',
+//     ));
+// }
 add_action('wp_head', 'blankslate_pingback_header');
 function blankslate_pingback_header()
 {
@@ -235,3 +235,11 @@ function themeslug_editor_assets()
         $style_asset['version']
     );
 }
+
+
+
+// This theme uses wp_nav_menu() in two locations.  
+register_nav_menus(array(
+    'primary' => __('Primary Navigation', 'blankslate'),
+    'secondary' => __('Secondary Navigation', 'blankslate')
+));
