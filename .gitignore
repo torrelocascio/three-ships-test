@@ -101,3 +101,7 @@ wp-content/plugins/hello.php
 *.asf
 *.wmv
 *.avi
+node_modules/
+node_modules/
+npm-debug.log
+/public
