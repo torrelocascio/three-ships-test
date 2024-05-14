@@ -1,3 +1,25 @@
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.3em;
+    font-weight: 600;
+}
+
+p {
+    color: rgb(145, 145, 145);
+    line-height: 1.2em;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -68,8 +90,31 @@ footer {
 
 
 // HOMEPAGE STYLES
-.testimonial-empty-button {
-    background-color: lightgray;
-    padding: 5px;
-    color: darkgray;
+
+.entry-content {
+    > .gb-container {
+        padding: 75px;
+    }
 }
+
+.home-page-brief-container {
+    // min-width: 500px;
+}
+
+.testimonial-wrapper {
+    max-width: 700px;
+
+    .testimonial-heading-wrapper {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .testimonial-empty-button {
+        background-color: #f9f7f7;
+        border-radius: 4px;
+        padding: 6px 8px;
+        color: black;
+        display: inline-block;
+        // margin-bottom: 5px;
+    }
+}
+

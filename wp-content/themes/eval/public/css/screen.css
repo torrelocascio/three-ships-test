@@ -1,6 +1,28 @@
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/screen.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.3em;
+  font-weight: 600;
+}
+
+p {
+  color: rgb(145, 145, 145);
+  line-height: 1.2em;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -53,10 +75,23 @@ footer .bottomMenu li a:hover {
   color: black;
 }
 
-.testimonial-empty-button {
-  background-color: lightgray;
-  padding: 5px;
-  color: darkgray;
+.entry-content > .gb-container {
+  padding: 75px;
+}
+
+.testimonial-wrapper {
+  max-width: 700px;
+}
+.testimonial-wrapper .testimonial-heading-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.testimonial-wrapper .testimonial-empty-button {
+  background-color: #f9f7f7;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: black;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=screen.css.map*/
