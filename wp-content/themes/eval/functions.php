@@ -213,7 +213,7 @@ function themeslug_editor_styles()
 }
 
 
-add_action('enqueue_block_editor_assets', 'themeslug_editor_assets');
+add_action('wp_enqueue_scripts', 'themeslug_editor_assets');
 
 function themeslug_editor_assets()
 {

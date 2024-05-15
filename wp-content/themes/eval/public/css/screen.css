@@ -1,6 +1,15 @@
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/screen.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  src: url(../fonts/GeistVF.cd0abceb.ttf) format("truetype");
+}
+* {
+  font-family: "Geist" !important;
+}
+
 h1 {
   font-size: 28px;
   font-weight: 700;
@@ -105,6 +114,7 @@ footer .bottomMenu li a:hover {
   max-width: 800px;
   margin: auto;
   margin-top: 20px;
+  row-gap: 40px;
 }
 .home .product-list li {
   width: 200px;

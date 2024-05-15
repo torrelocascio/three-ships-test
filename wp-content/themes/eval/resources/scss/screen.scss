@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Geist';
+    font-style: normal;
+    src: url('../fonts/GeistVF.ttf') format('truetype');
+}
+
+* {
+    font-family: "Geist" !important;
+}
+
 h1 {
   font-size: 28px;
   font-weight: 700;
@@ -117,6 +127,7 @@ footer {
     max-width: 800px;
     margin: auto;
     margin-top: 20px;
+    row-gap: 40px;
 
     li {
       width: 200px;
