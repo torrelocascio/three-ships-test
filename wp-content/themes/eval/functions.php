@@ -243,3 +243,44 @@ register_nav_menus(array(
     'primary' => __('Primary Navigation', 'blankslate'),
     'secondary' => __('Secondary Navigation', 'blankslate')
 ));
+
+
+add_shortcode('homepage_product_list', 'do_get_homepage_product_list');
+
+
+
+function do_get_homepage_product_list(){
+
+    $args = array(
+        'post_type' => 'product',
+        'limit' => 3,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+
+    $products = new WP_Query($args);
+
+    if($products->have_posts()){
+        $output = '<ul class="product-list">';
+        while($products->have_posts()){
+
+            $products->the_post();
+            $excerpt = get_the_excerpt();
+            $output .= '<li class="product-item">';
+            $output .= '<a href="'.get_the_permalink().'">';
+            $output .= get_the_post_thumbnail();
+            $output .= '<h4>'.get_the_title().'</h4>';
+            $output .= '<p>'.$excerpt.'</p>';
+            $output .= '</a>';
+            $output .= '</li>';
+        }
+        $output .= '</ul>';
+    }else{
+        $output = '<p>No products found</p>';
+    }
+
+    wp_reset_postdata();
+
+    return $output;
+}
+

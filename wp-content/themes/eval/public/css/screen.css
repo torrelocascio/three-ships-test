@@ -8,7 +8,7 @@ h1 {
 
 h2 {
   font-size: 34px;
-  line-height: 1.5em;
+  line-height: 1.4em;
   font-weight: 700;
 }
 
@@ -18,27 +18,45 @@ h3 {
   font-weight: 600;
 }
 
+h4 {
+  font-size: 16px;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
 p {
   color: rgb(145, 145, 145);
   line-height: 1.2em;
+  font-size: 14px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 header #site-title {
   font-weight: 600px;
   font-size: 20px;
   display: flex;
+  align-items: center;
 }
-header #site-title #home-icon {
-  margin-right: 1rem;
+header #site-title .headline {
+  margin-top: 2px;
+}
+header #site-title .home-icon {
+  color: darkgray;
+  margin-right: 10px;
+  font-size: 16px;
+}
+header .headline {
+  font-size: 18px;
 }
 header ul#menu-menu-1 {
   display: flex;
   list-style: none;
   padding: 0;
+  align-items: center;
 }
 header ul#menu-menu-1 li {
   margin-right: 1rem;
@@ -77,6 +95,33 @@ footer .bottomMenu li a:hover {
 
 .entry-content > .gb-container {
   padding: 75px;
+}
+
+.home .product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+}
+.home .product-list li {
+  width: 200px;
+}
+.home .product-list li a {
+  text-decoration: none;
+  color: black;
+}
+.home .product-list li img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 4px;
+}
+
+.home-page-brief-container p.we-provide {
+  max-width: 380px;
+  margin-bottom: 10px;
 }
 
 .testimonial-wrapper {
