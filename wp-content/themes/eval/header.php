@@ -17,9 +17,12 @@
             <div id="branding">
                 <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                     <a href="<?php esc_url(home_url('/')) ?>" title="<?php esc_attr(get_bloginfo('name')) ?>" rel="home" itemprop="url"><i class="home-icon fas fa-home"></i></a>
+
                     <?php
                     if (is_front_page() || is_home() || is_front_page() && is_home()) {
                     ?>
+                        <?php
+                        ?>
                         <span class="headline">Our Gutters Are Available in <span id="three-ships-user-location">Your Location</span></span>
                     <?php
                     }

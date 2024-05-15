@@ -6,8 +6,25 @@
   font-style: normal;
   src: url(../fonts/GeistVF.cd0abceb.ttf) format("truetype");
 }
-* {
-  font-family: "Geist" !important;
+p, li, h1, h2, h3, h4, h5, h6, span {
+  font-family: "Geist";
+}
+p i, li i, h1 i, h2 i, h3 i, h4 i, h5 i, h6 i, span i {
+  font-family: "inherit";
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+button:hover {
+  background-color: white;
+  color: black;
 }
 
 h1 {
@@ -43,6 +60,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  margin-bottom: 60px;
 }
 header #site-title {
   font-weight: 600px;
@@ -147,6 +165,34 @@ footer .bottomMenu li a:hover {
   padding: 6px 8px;
   color: black;
   display: inline-block;
+}
+
+article.product .section .section-inner {
+  max-width: 800px;
+  margin: auto;
+}
+article.product .section .top {
+  display: flex;
+  justify-content: "center";
+}
+article.product .section .top .image-container {
+  margin-right: 50px;
+}
+article.product .section .top .product-description-container .full-description {
+  margin-bottom: 20px;
+}
+article.product .section .top .product-description-container li {
+  margin-bottom: 10px;
+}
+article.product .section .top .product-description-container li span {
+  font-size: 12px;
+  font-weight: 600;
+}
+article.product .section .top .product-description-container li i {
+  margin-right: 10px;
+}
+article.product .section .top .product-description-container .price-container {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=screen.css.map*/
