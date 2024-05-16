@@ -12,9 +12,8 @@ module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
-			'js/editor':  path.resolve( process.cwd(), 'resources/js',   'editor.js'   ),
-			'css/screen': path.resolve( process.cwd(), 'resources/scss', 'screen.scss' ),
-			'css/editor': path.resolve( process.cwd(), 'resources/scss', 'editor.scss' ),
+			'js/index':  path.resolve( process.cwd(), 'resources/js',   'index.js'   ),
+			'css/index': path.resolve( process.cwd(), 'resources/scss', 'index.scss' ),
 		},
 		plugins: [
 			// Include WP's plugin config.

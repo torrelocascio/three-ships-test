@@ -2882,9 +2882,9 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!********************************!*\
-  !*** ./resources/js/editor.js ***!
-  \********************************/
+/*!*******************************!*\
+  !*** ./resources/js/index.js ***!
+  \*******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var es6_simple_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! es6-simple-carousel */ "./node_modules/es6-simple-carousel/index.js");
 /* harmony import */ var es6_simple_carousel_dist_styles_slider_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! es6-simple-carousel/dist/styles/slider.css */ "./node_modules/es6-simple-carousel/dist/styles/slider.css");
@@ -2986,4 +2986,4 @@ window.addEventListener('load', function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=editor.js.map
+//# sourceMappingURL=index.js.map
