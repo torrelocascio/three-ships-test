@@ -1,7 +1,7 @@
 ### Deliverables
 - A GitHub repository link containing all the code and documentation for your project.
 
-https://github.com/torrelocascio/three-ships-test/settings
+https://github.com/torrelocascio/three-ships-test
 
 - A sql dump of the database for the WordPress site.
 
