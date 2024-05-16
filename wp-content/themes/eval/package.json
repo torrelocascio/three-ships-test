@@ -13,5 +13,9 @@
     "@wordpress/scripts": "^27.8.0",
     "path": "^0.12.7",
     "webpack-remove-empty-scripts": "^1.0.4"
+  },
+  "dependencies": {
+    "carousel": "^0.0.3",
+    "es6-simple-carousel": "^2.1.0"
   }
 }

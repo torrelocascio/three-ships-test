@@ -4,19 +4,39 @@
   src: url("../fonts/GeistVF.ttf") format("truetype");
 }
 
-p, li, h1, h2, h3, h4, h5, h6, span{
+$base-color: #161616;
+$base-lighter: #252526;
+$base-text: rgb(145, 145, 145);
+$base-light-gray: #e5e5e5;
+$base-off-white: #f2f2f2;
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
   font-family: "Geist";
-  
+
   i {
     font-family: "inherit";
-  
   }
 }
 
+img {
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
 button {
-  background-color: black;
+  background-color: $base-color;
   color: white;
-  border: 1px solid black;
+  border: 1px solid $base-color;
   padding: 5px 15px;
   border-radius: 4px;
   cursor: pointer;
@@ -24,8 +44,7 @@ button {
 
   &:hover {
     background-color: white;
-    color: black;
-    
+    color: $base-color;
   }
 }
 
@@ -53,16 +72,33 @@ h4 {
 }
 
 p {
-  color: rgb(145, 145, 145);
+  color: $base-text;
   line-height: 1.2em;
   font-size: 14px;
+}
+
+.section {
+  &:nth-child(even) {
+    background-color: $base-light-gray !important;
+  }
+
+  .inner-section {
+    max-width: 800px !important;
+    margin: auto !important;
+    background-color: inherit;
+    padding: 60px 40px;
+
+    &.small {
+      max-width: 600px !important;
+    }
+  }
 }
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin-bottom: 60px;
+  // margin-bottom: 20px;
 
   #site-title {
     font-weight: 600px;
@@ -95,7 +131,7 @@ header {
       margin-right: 1rem;
 
       a {
-        color: black;
+        color: $base-color;
       }
     }
   }
@@ -103,6 +139,7 @@ header {
 
 footer {
   /* Style the links inside the navigation bar */
+  height: 120px;
   .bottomMenu {
     background-color: #333;
     overflow: hidden;
@@ -116,7 +153,7 @@ footer {
       a {
         float: left;
         display: block;
-        color: #f2f2f2;
+        color: $base-off-white;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -124,23 +161,33 @@ footer {
       }
 
       /* Change the color of links on hover */
-      a:hover {
-        background-color: #ddd;
-        color: black;
-      }
     }
   }
 }
 
 // HOMEPAGE STYLES
 
-.entry-content {
-  > .gb-container {
-    padding: 75px;
-  }
-}
-
 .home {
+
+  .testimonial-section {
+
+    .testimonial-list {
+      // background-color: green;
+      > div {
+        > div {
+          padding-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    img {
+      width: 600px;
+      height: auto;
+    }
+
+  }
+
   .product-list {
     display: flex;
     justify-content: space-around;
@@ -156,7 +203,7 @@ footer {
 
       a {
         text-decoration: none;
-        color: black;
+        color: $base-color;
       }
       img {
         width: 150px;
@@ -175,70 +222,201 @@ footer {
   }
 }
 
-.testimonial-wrapper {
-  max-width: 700px;
+.testimonial-heading-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.testimonial-empty-button {
+  background-color: $base-off-white;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: $base-color;
+  display: inline-block;
+  // margin-bottom: 5px;
+}
 
-  .testimonial-heading-wrapper {
-    text-align: center;
-    margin-bottom: 30px;
+// PRODUCT PAGE STYLES
+
+article.product {
+  .top {
+    display: flex;
+    justify-content: "center";
+
+    .image-container {
+      margin-right: 50px;
+    }
+
+    .product-description-container {
+      .full-description {
+        margin-bottom: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+
+        span {
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      .price-container {
+        font-weight: 600;
+      }
+    }
   }
-  .testimonial-empty-button {
-    background-color: #f9f7f7;
-    border-radius: 4px;
-    padding: 6px 8px;
-    color: black;
-    display: inline-block;
-    // margin-bottom: 5px;
+
+  .bottom {
+    h3 {
+      margin-bottom: 20px;
+    }
+    .product-gallery-container {
+      // display: flex;
+      // justify-content: center;
+
+      .gallery-image {
+        // margin-right: 35px;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+
+        a {
+          // display: flex;
+          // align-items: center;
+          display: flex;
+        }
+        img {
+          // width: auto;
+          // height: 200px;
+          // width: 300px;
+          // height: 300px;
+          // width: 100%;
+          // height: 250px;
+          display: inline-block;
+          margin: auto;
+          border-radius: 1px;
+          width: 100%;
+          height: auto;
+          margin-right: 15px;
+        }
+      }
+    }
   }
 }
 
+.slides {
+  display: flex;
+  position: relative;
+  width: 5000000px;
+}
 
+.slides.shifting {
+  transition: all 0.2s ease-out;
+}
 
-  // PRODUCT PAGE STYLES
+.slider {
+  position: relative;
+}
+.slider .wrapper {
+  overflow: hidden;
+}
 
-  article.product {
-    .section {
+.slide {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.slide > * {
+  flex: 1;
+}
 
-      .section-inner {
-        max-width: 800px;
-        margin: auto;
-      }
-      .top {
-        display: flex;
-        justify-content: "center";
+.control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50px;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  direction: ltr;
+}
+.control:after {
+  display: block;
+  font-size: 36px;
+}
 
-        .image-container {
-          margin-right: 50px;
-        }
+.prev,
+.next {
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 
-        .product-description-container {
+.prev {
+  left: -20px;
+}
+.prev:after {
+  content: "\2039";
+}
 
-          .full-description {
-            margin-bottom: 20px;
-          }
+.next {
+  right: -20px;
+}
+.next:after {
+  content: "\203A";
+}
 
-          li {
-            margin-bottom: 10px;
+.prev:active,
+.next:active {
+  transform: scale(0.8);
+}
 
-            span {
-              font-size: 12px;
-              font-weight: 600;
-            }
+.dots {
+  padding: 0;
+  text-align: center;
+}
 
-            i {
-              margin-right: 10px;
-            }
-          }
+.dots li {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #ababab;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
 
-          .price-container {
-            font-weight: 600;
+.dots li.active {
+  background-color: #efefef;
+}
 
-
-          }
-        }
-
-
-      }
-
-    }
-  }
+.slider-rtl {
+  direction: rtl;
+}
+.slider-rtl .control {
+  transform: rotateY(180deg);
+}
+.slider-rtl .control:after {
+  position: relative;
+  top: -2px;
+}
+.slider-rtl .next {
+  right: auto;
+  left: -20px;
+}
+.slider-rtl .prev {
+  left: auto;
+  right: -20px;
+}

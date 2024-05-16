@@ -1,22 +1,47 @@
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./resources/scss/screen.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 @font-face {
   font-family: "Geist";
   font-style: normal;
   src: url(../fonts/GeistVF.cd0abceb.ttf) format("truetype");
 }
-p, li, h1, h2, h3, h4, h5, h6, span {
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
   font-family: "Geist";
 }
-p i, li i, h1 i, h2 i, h3 i, h4 i, h5 i, h6 i, span i {
+p i,
+li i,
+h1 i,
+h2 i,
+h3 i,
+h4 i,
+h5 i,
+h6 i,
+span i {
   font-family: "inherit";
 }
 
+img {
+  border-radius: 4px;
+}
+img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 button {
-  background-color: black;
+  background-color: #161616;
   color: white;
-  border: 1px solid black;
+  border: 1px solid #161616;
   padding: 5px 15px;
   border-radius: 4px;
   cursor: pointer;
@@ -24,7 +49,7 @@ button {
 }
 button:hover {
   background-color: white;
-  color: black;
+  color: #161616;
 }
 
 h1 {
@@ -56,11 +81,23 @@ p {
   font-size: 14px;
 }
 
+.section:nth-child(even) {
+  background-color: #e5e5e5 !important;
+}
+.section .inner-section {
+  max-width: 800px !important;
+  margin: auto !important;
+  background-color: inherit;
+  padding: 60px 40px;
+}
+.section .inner-section.small {
+  max-width: 600px !important;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin-bottom: 60px;
 }
 header #site-title {
   font-weight: 600px;
@@ -89,11 +126,12 @@ header ul#menu-menu-1 li {
   margin-right: 1rem;
 }
 header ul#menu-menu-1 li a {
-  color: black;
+  color: #161616;
 }
 
 footer {
   /* Style the links inside the navigation bar */
+  height: 120px;
 }
 footer .bottomMenu {
   background-color: #333;
@@ -115,15 +153,15 @@ footer .bottomMenu li a {
   text-decoration: none;
   font-size: 17px;
 }
-footer .bottomMenu li a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
-.entry-content > .gb-container {
-  padding: 75px;
+.home .testimonial-section .testimonial-list > div > div {
+  padding-right: 10px;
+  margin-bottom: 10px;
 }
-
+.home .testimonial-section img {
+  width: 600px;
+  height: auto;
+}
 .home .product-list {
   display: flex;
   justify-content: space-around;
@@ -139,7 +177,7 @@ footer .bottomMenu li a:hover {
 }
 .home .product-list li a {
   text-decoration: none;
-  color: black;
+  color: #161616;
 }
 .home .product-list li img {
   width: 150px;
@@ -152,47 +190,180 @@ footer .bottomMenu li a:hover {
   margin-bottom: 10px;
 }
 
-.testimonial-wrapper {
-  max-width: 700px;
-}
-.testimonial-wrapper .testimonial-heading-wrapper {
+.testimonial-heading-wrapper {
   text-align: center;
   margin-bottom: 30px;
 }
-.testimonial-wrapper .testimonial-empty-button {
-  background-color: #f9f7f7;
+
+.testimonial-empty-button {
+  background-color: #f2f2f2;
   border-radius: 4px;
   padding: 6px 8px;
-  color: black;
+  color: #161616;
   display: inline-block;
 }
 
-article.product .section .section-inner {
-  max-width: 800px;
-  margin: auto;
-}
-article.product .section .top {
+article.product .top {
   display: flex;
   justify-content: "center";
 }
-article.product .section .top .image-container {
+article.product .top .image-container {
   margin-right: 50px;
 }
-article.product .section .top .product-description-container .full-description {
+article.product .top .product-description-container .full-description {
   margin-bottom: 20px;
 }
-article.product .section .top .product-description-container li {
+article.product .top .product-description-container li {
   margin-bottom: 10px;
 }
-article.product .section .top .product-description-container li span {
+article.product .top .product-description-container li span {
   font-size: 12px;
   font-weight: 600;
 }
-article.product .section .top .product-description-container li i {
+article.product .top .product-description-container li i {
   margin-right: 10px;
 }
-article.product .section .top .product-description-container .price-container {
+article.product .top .product-description-container .price-container {
   font-weight: 600;
+}
+article.product .bottom h3 {
+  margin-bottom: 20px;
+}
+article.product .bottom .product-gallery-container .gallery-image:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+article.product .bottom .product-gallery-container .gallery-image a {
+  display: flex;
+}
+article.product .bottom .product-gallery-container .gallery-image img {
+  display: inline-block;
+  margin: auto;
+  border-radius: 1px;
+  width: 100%;
+  height: auto;
+  margin-right: 15px;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  width: 5000000px;
+}
+
+.slides.shifting {
+  transition: all 0.2s ease-out;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider .wrapper {
+  overflow: hidden;
+}
+
+.slide {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.slide > * {
+  flex: 1;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50px;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  direction: ltr;
+}
+
+.control:after {
+  display: block;
+  font-size: 36px;
+}
+
+.prev,
+.next {
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.prev {
+  left: -20px;
+}
+
+.prev:after {
+  content: "‹";
+}
+
+.next {
+  right: -20px;
+}
+
+.next:after {
+  content: "›";
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.8);
+}
+
+.dots {
+  padding: 0;
+  text-align: center;
+}
+
+.dots li {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #ababab;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.dots li.active {
+  background-color: #efefef;
+}
+
+.slider-rtl {
+  direction: rtl;
+}
+
+.slider-rtl .control {
+  transform: rotateY(180deg);
+}
+
+.slider-rtl .control:after {
+  position: relative;
+  top: -2px;
+}
+
+.slider-rtl .next {
+  right: auto;
+  left: -20px;
+}
+
+.slider-rtl .prev {
+  left: auto;
+  right: -20px;
 }
 
 /*# sourceMappingURL=screen.css.map*/

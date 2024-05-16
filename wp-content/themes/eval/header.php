@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="path/to/lightbox.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/464ca047f3.js" crossorigin="anonymous"></script>
 
     <meta charset="<?php bloginfo('charset'); ?>" />
@@ -16,8 +17,7 @@
         <header id="header" role="banner">
             <div id="branding">
                 <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                    <a href="<?php esc_url(home_url('/')) ?>" title="<?php esc_attr(get_bloginfo('name')) ?>" rel="home" itemprop="url"><i class="home-icon fas fa-home"></i></a>
-
+                    <a href="<?php echo home_url('/') ?>" title="<?php esc_attr(get_bloginfo('name')) ?>" rel="home" itemprop="url"><i class="home-icon fas fa-home"></i></a>
                     <?php
                     if (is_front_page() || is_home() || is_front_page() && is_home()) {
                     ?>

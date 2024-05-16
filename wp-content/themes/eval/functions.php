@@ -234,6 +234,18 @@ function themeslug_editor_assets()
         $style_asset['dependencies'],
         $style_asset['version']
     );
+
+
+    wp_enqueue_script(
+        'lightbox-js',
+        get_parent_theme_file_uri('lightbox/dist/js/lightbox.min.js'),
+    );
+
+    wp_enqueue_style(
+        'lightbox-css',
+        get_parent_theme_file_uri('lightbox/dist/css/lightbox.min.css'),
+
+    );
 }
 
 

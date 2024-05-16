@@ -1,5 +1,43 @@
 const LOCATION_KEY = 'three_ships_location';    
 
+import { Slider } from 'es6-simple-carousel';
+import 'es6-simple-carousel/dist/styles/slider.css';
+// optional
+// import 'es6-simple-carousel/dist/styles/custom.css';
+//...
+
+
+function initiateSlider(){
+    let slider = document.querySelector('#slider');
+    console.log('here is slider', slider);
+    if(!slider){
+        return;
+    }
+    const slideConfig = {
+        slider:  slider,
+        threshold: 50,
+        // infinite: true,
+        nav: true,
+        dots: true,
+        autoPlay:false,
+        responsive: {
+          0: {
+            items: 1.5
+          },
+          560: {
+            items: 2
+          },
+          760: {
+            items: 3
+          }
+        }
+      };
+      
+      let newSlide = new Slider(slideConfig);
+      console.log('here is newSlide', newSlide)
+}
+
+
 async function getLocationData(){
    let three_ships_location = getWithExpiry(LOCATION_KEY);
    if(three_ships_location){
@@ -51,17 +89,29 @@ function setWithExpiry(key, value, ttl) {
     localStorage.setItem(key, JSON.stringify(item))
 }
 
-window.addEventListener('load', async function () {
 
-    console.log('window loaded');
+async function startIpLocationGetter(){
+    let regionElement = document.querySelector('#three-ships-user-location');
+    if(!regionElement){
+        return;
+    }
     let locationData = await getLocationData();
     console.log("here is locationData", locationData);
     if(locationData.region_code){
 
         
-        let regionElement = document.querySelector('#three-ships-user-location');
         regionElement.textContent = locationData.city + " " + locationData.region_code;
     } else {
     }
+
+}
+
+
+
+window.addEventListener('load', function () {
+
+    initiateSlider();
+    startIpLocationGetter();
+    console.log('window loaded');
 
   })
